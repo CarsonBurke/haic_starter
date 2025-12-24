@@ -1,0 +1,29 @@
+{
+    "snakes": [
+      {
+        "name": "your_snake",
+        "directory": "./your_snake",
+        "port": 7123
+      },
+      {
+        "name": "DefensiveGuardian",
+        "directory": "./example_snakes/DefensiveGuardian",
+        "port": 7124
+      },
+      {
+        "name": "oliver-king-snake",
+        "directory": "./example_snakes/oliver-king-snake",
+        "port": 7126
+      },
+      {
+        "name": "untimely-neglected-wearable",
+        "directory": "./example_snakes/untimely-neglected-wearable",
+        "port": 7125
+      }
+    ],
+    "base_port": 7123,
+    "tournament_settings": {
+      "iterations_per_matchup": 100,
+      "workers": 4
+    }
+  }
