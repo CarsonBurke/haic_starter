@@ -52,12 +52,15 @@ This script will automatically:
 If you prefer manual setup or encounter issues, follow the detailed steps below.
 
 ### Manual Setup (Step by Step)
-0. First, clone this repo:
+0. First, clone this repo or create a new repo based on this github template:
 
+If you clone:
 ```bash
 git clone --recurse-submodules https://github.com/abehou/haic_starter.git
 git submodule update --init --recursive # In case you forgot to clone with the recursive flag.
 ``` 
+Or you can clone after use this template to create your own repo.
+
 1. Set up a conda environment called 'snake' (must use this name in order for run_local_tournament.sh to work):
 ```bash
 conda create -n snake python=3.10
@@ -215,7 +218,12 @@ We have provided a minimal starter Python snake bot under `your_snake/`. Please 
 To help you develop the snakes, we have prepared some example snakes in `example_snakes/`. Feel free to read their codes and get a sense of how their snakes get built. 
 
 ### Minimally Test Your Snake
-First, make sure you have built the battlesnake-cli by following `rules/README.md`.
+First, make sure you have built the battlesnake-cli by 
+```bash
+conda activate snake
+conda install conda-forge::go
+cd rules && go build -o battlesnake ./cli/battlesnake/main.go && cd ..
+```
 Then, run:
 `PORT=7123 python your_snake/main.py`
 Open a new terminal window, and then:
